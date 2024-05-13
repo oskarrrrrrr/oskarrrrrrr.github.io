@@ -1,32 +1,42 @@
 :root {
     --main-bg-color: #3e3e3e;
     --font-color: #e0e0e0;
+    --link-color: #ffee54;
 }
 
-a { all: unset; }
+a {
+    all: unset;
+    color: var(--link-color);
+}
+
+a:hover {
+    text-decoration: underline;
+}
 
 html {
     font-family: monospace;
+    color: var(--font-color);
 }
 
 body {
     background-color: var(--main-bg-color);
+    height: 100%;
     max-width: 800px;
     display: block;
     margin: 0 auto;
     margin-top: 10px;
 }
 
-#main {
+#header {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    margin: 1em;
 }
 
 #name-header {
     font-size: 5em;
-    color: var(--font-color);
     margin: 0;
 
     @media screen and (max-width: 500px) {
@@ -41,5 +51,15 @@ body {
 
     @media screen and (max-width: 500px) {
         width: 150px;
+    }
+}
+
+#main {
+    margin-left: 4em;
+    margin-right: 4em;
+
+    @media screen and (max-width: 500px) {
+        margin-left: 2em;
+        margin-right: 2em;
     }
 }
