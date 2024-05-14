@@ -2,6 +2,7 @@
     --main-bg-color: #3e3e3e;
     --font-color: #e0e0e0;
     --link-color: #ffee54;
+    --tag-bg: #878787;
 }
 
 a {
@@ -62,4 +63,87 @@ body {
         margin-left: 2em;
         margin-right: 2em;
     }
+}
+
+.content {
+    margin-left: 0.5em;
+}
+
+#projects {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1em;
+
+    @media screen and (max-width: 500px) {
+        gap: .5em;
+    }
+}
+
+.project-img {
+    width: 150px;
+    margin: .5em;
+
+    @media screen and (max-width: 500px) {
+        margin: .2em;
+        width: 100px;
+    }
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    border: .1em solid var(--font-color);
+}
+
+.project-card:hover {
+    border: solid;
+    border-color: var(--link-color);
+    border-width: .1em;
+}
+
+.project-card-title {
+    font-size: 1.2em;
+    margin-bottom: .5em;
+}
+
+#test {
+    text-decoration: none;
+}
+
+.tags {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.tag {
+    background-color: var(--tag-bg);
+    padding: .2em;
+    padding-left: .4em;
+    padding-right: .4em;
+}
+
+ul {
+  margin: .2em;
+}
+ul.dashed {
+  list-style-type: none;
+}
+
+ul.dashed > li {
+  text-indent: -2em;
+}
+
+ul.dashed > li:before {
+    content: "- ";
+    text-indent: 0;
 }
