@@ -22,7 +22,7 @@ html {
 body {
     background-color: var(--main-bg-color);
     height: 100%;
-    max-width: 800px;
+    max-width: 900px;
     display: block;
     margin: 0 auto;
     margin-top: 10px;

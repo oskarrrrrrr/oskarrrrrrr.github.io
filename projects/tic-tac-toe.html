@@ -28,16 +28,16 @@
         <a id="name-header" href="/">oskar tołkacz</a>
     </div>
     <div id="main">
-        <h1>projects/boring-sudoku</h1>
+        <h1>projects/mmo-tic-tac-toe</h1>
         <div class="content">
-            <a href="https://www.boringsudoku.com">website</a>
-            <a href="https://github.com/oskarrrrrrr/sudoku">source</a>
+            <a href="https://www.sociablevase.xyz">website</a>
+            <a href="https://github.com/oskarrrrrrr/massive-coop">source</a>
             <br><br>
             <div class="tags">
                 tech used:
                 <span class="tag">go</span>
-                <span class="tag">postgres</span>
-                <span class="tag">typescript</span>
+                <span class="tag">websockets</span>
+                <span class="tag">js</span>
                 <span class="tag">html</span>
                 <span class="tag">css</span>
                 <span class="tag">nginx</span>
@@ -45,16 +45,17 @@
                 <span class="tag">github actions</span>
             </div>
             <br>
-            A sudoku app built with minimalistic tools (e.g. no frontend framework).<br><br>
-
-            Features:<br>
-            <ul class="dashed">
-                <li>pregenerated sudokus fetched from the server</li>
-                <li>various kinds of cell highlighting options</li>
-                <li>persistent settings (for example: highlighting type and dark mode)</li>
-                <li>users and history of games [wip]</li>
-            </ul>
-
+            In this game, each player is automatically assigned to eiter team O or
+            team X. During their turn, players can vote for any legal move, and once
+            the voting period ends, the move with the most votes is played. If there
+            are no players or no votes, a random move will be made. Grey numbers indicate
+            the vote counts, which are either shown after a move is made or continuously
+            during the opponent's turn.
+            <br><br>
+            The backend is built using Go, with goroutines managing websocket connections,
+            game timing, and broadcasting the updated game state to all players in real-time.
+            For example, vote counts and the number of players in each team are updated
+            multiple times per second.
         </div>
     </div>
 </body>
